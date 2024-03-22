@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Recipe App</string>
+
+    <!--Authentication Activity-->
+    <string name="auth_activity_login_text">Login</string>
+    <string name="auth_activity_signup_text">Sign Up</string>
+    <string name="auth_activity_do_not_have_account_text">Don\'t have an account?</string>
+    <string name="auth_activity_already_have_account_text">Already have an account?</string>
+
+    <!--Authentication Options Activity - login-->
+    <string name="auth_activity_login_welcome_back_text">Welcome Back</string>
+    <string name="auth_activity_login_login_welcome_text">I am happy to see you again. You can login for more features.</string>
+    <string name="auth_activity_login_kindly_register_text">Kindly register to continue for more features.</string>
+    <string name="auth_activity_login_email_username_text">Email</string>
+    <string name="auth_activity_login_password_text">Password</string>
+    <string name="auth_activity_login_successful_text">Login successful!</string>
+    <string name="auth_activity_login_failed_text">Login failed! Please try again later</string>
+
+    <!--Authentication Options Activity - sign up-->
+    <string name="auth_activity_sign_up_email_text">Email</string>
+    <string name="auth_activity_sign_up_password_text">Password</string>
+    <string name="auth_activity_sign_up_email_error_text">Invalid email format</string>
+    <string name="auth_activity_sign_up_password_error_text">Password must contain at least one special character, one letter and one number, 8–16 length</string>
+    <string name="auth_activity_sign_up_successful_text">Registration successful!</string>
+    <string name="auth_activity_sign_up_failed_text">Registration failed! Please try again later</string>
+
 </resources>

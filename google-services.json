@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "295635600135",
+    "project_id": "recipeapp-f1240",
+    "storage_bucket": "recipeapp-f1240.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295635600135:android:0215a9c5f6c63d5cc2fba2",
+        "android_client_info": {
+          "package_name": "com.mrsworkshop.recipeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFTvgGxOw6mE7vQnf7TSg7uOGzd5Bd_gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
