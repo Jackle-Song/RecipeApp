@@ -40,6 +40,22 @@ android {
 }
 
 dependencies {
+    //glide
+    implementation (libs.glide)
+    implementation (libs.glide.transformations)
+
+    //retrofit
+    implementation(libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.adapter.rxjava2)
+
+    //okhttp3
+    implementation (libs.logging.interceptor)
+
+    //gson
+    implementation (libs.gson)
+
+    //firebase auth
     implementation(libs.firebase.auth)
 
     implementation(libs.androidx.core.ktx)

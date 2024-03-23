@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import com.google.firebase.auth.FirebaseAuth
 import com.mrsworkshop.recipeapp.R
 import com.mrsworkshop.recipeapp.databinding.ActivityAuthenticationBinding
@@ -30,6 +31,10 @@ class AuthenticationActivity : BaseActivity() {
         setContentView(binding.root)
 
         mAuth = FirebaseAuth.getInstance()
+        if (mAuth.currentUser != null) {
+            val intent = Intent(this@AuthenticationActivity, RecipeListActivity::class.java)
+            startActivity(intent)
+        }
 
         setStatusBarColor(R.color.light_yellow_ffe275)
         checkButtonValidation(false)
@@ -37,7 +42,17 @@ class AuthenticationActivity : BaseActivity() {
         setupComponentListener()
     }
 
+    /**
+     * private function
+     */
+
     private fun setupComponentListener() {
+        onBackPressedDispatcher.addCallback(this, object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                finishAffinity()
+            }
+        })
+
         binding.etEditTextEmail.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(
                 s: CharSequence,

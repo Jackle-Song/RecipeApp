@@ -1,10 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
+    android:padding="16dp"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    
+    <ImageView
+        android:id="@+id/imgLogout"
+        app:tint="@color/black_32"
+        android:layout_gravity="end"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilOutlinedTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/recipe_list_activity_search_recipe_text"
+        app:hintTextColor="@color/black_32"
+        android:textColorHint="@color/light_grey_a5"
+        app:boxStrokeColor="@color/light_yellow_ffe275"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/light_grey_a5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEditTextSearchRecipe"
+            android:textColor="@color/black_32"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/recipe_list_activity_recipe_types_text"
+            android:textColor="@color/black_32"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerRecipeTypeList"
+            android:backgroundTint="@color/light_grey_a5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewMovieList"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

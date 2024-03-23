@@ -24,4 +24,16 @@
     <string name="auth_activity_sign_up_successful_text">Registration successful!</string>
     <string name="auth_activity_sign_up_failed_text">Registration failed! Please try again later</string>
 
+    <!--Recipe List Activity-->
+    <string name="recipe_list_activity_search_recipe_text">Search from list</string>
+    <string name="recipe_list_activity_recipe_types_text">Recipe Types :</string>
+
+    <string-array name="spinnerRecipeTypeItems">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Salad</item>
+        <item>Dessert</item>
+    </string-array>
+
 </resources>
