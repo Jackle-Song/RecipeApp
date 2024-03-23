@@ -27,6 +27,11 @@ import kotlinx.coroutines.withContext
 
 
 class RecipeListActivity : BaseActivity(), RecipeListAdapter.RecipeListInterface {
+
+    companion object {
+        const val INTENT_RECIPE_DETAILS = "recipeDetails"
+    }
+
     private lateinit var binding: ActivityRecipeListBinding
     private lateinit var recipeListAdapter: RecipeListAdapter
     private lateinit var mAuth : FirebaseAuth
@@ -46,7 +51,9 @@ class RecipeListActivity : BaseActivity(), RecipeListAdapter.RecipeListInterface
     }
 
     override fun viewRecipeDetails(recipeListData: RecipeListData) {
-        // do nothing
+        val intent = Intent(this@RecipeListActivity, RecipeDetailsActivity::class.java)
+        intent.putExtra(INTENT_RECIPE_DETAILS, Gson().toJson(recipeListData))
+        startActivity(intent)
     }
 
     /**

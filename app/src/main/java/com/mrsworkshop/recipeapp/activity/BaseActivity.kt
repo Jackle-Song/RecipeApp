@@ -3,11 +3,19 @@ package com.mrsworkshop.recipeapp.activity
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import com.mrsworkshop.recipeapp.component.LoadingDialog
 
 open class BaseActivity : AppCompatActivity() {
 
     private lateinit var loadingViewDialog: LoadingDialog
+
+    fun setStatusBarLightTheme(option : Boolean) {
+        val windowInsetsController = WindowCompat.getInsetsController(
+            window, window.decorView
+        )
+        windowInsetsController.isAppearanceLightStatusBars = option
+    }
 
     fun setStatusBarColor(color : Int) {
         val window = this.window

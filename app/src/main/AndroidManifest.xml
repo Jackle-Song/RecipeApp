@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeApp"
         tools:targetApi="31">
+        <activity android:name=".activity.RecipeDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
         <activity android:name=".activity.RecipeListActivity"
             android:exported="true"
             android:screenOrientation="portrait"/>
