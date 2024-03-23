@@ -215,7 +215,6 @@ class AuthenticationActivity : BaseActivity() {
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this@AuthenticationActivity, getString(R.string.auth_activity_login_successful_text), Toast.LENGTH_LONG).show()
                     dismissLoadingViewDialog()
 
                     val intent = Intent(this@AuthenticationActivity, RecipeListActivity::class.java)

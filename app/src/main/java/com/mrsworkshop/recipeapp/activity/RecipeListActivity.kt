@@ -127,6 +127,14 @@ class RecipeListActivity : BaseActivity(), RecipeListAdapter.RecipeListInterface
                 withContext(Dispatchers.Main) {
                     if (response?.isSuccessful == true) {
                         val recipeResponse = response.body()
+                        if (recipeResponse?.d.isNullOrEmpty()) {
+                            binding.recyclerviewMovieList.visibility = View.GONE
+                            binding.layoutEmptyState.visibility = View.VISIBLE
+                        }
+                        else {
+                            binding.recyclerviewMovieList.visibility = View.VISIBLE
+                            binding.layoutEmptyState.visibility = View.GONE
+                        }
                         recipeResponse?.d?.let { recipeDetailsList?.addAll(it) }
                         recipeListAdapter.updateRecipeList(recipeDetailsList)
                         dismissLoadingViewDialog()

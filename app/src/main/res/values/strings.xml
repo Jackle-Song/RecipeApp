@@ -27,6 +27,7 @@
     <!--Recipe List Activity-->
     <string name="recipe_list_activity_search_recipe_text">Search from list</string>
     <string name="recipe_list_activity_recipe_types_text">Recipe Types :</string>
+    <string name="recipe_list_activity_empty_text">No recipe found!</string>
 
     <!--Recipe Details Activity-->
     <string name="recipe_detail_activity_ingredient_title">Ingredients</string>

@@ -2,7 +2,6 @@ package com.mrsworkshop.recipeapp.activity
 
 import android.graphics.Color
 import android.os.Bundle
-import android.text.Html
 import android.view.WindowManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
